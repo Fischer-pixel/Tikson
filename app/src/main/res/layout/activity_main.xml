@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    android:layout_height="match_parent">
+<!--    android:paddingTop="?attr/actionBarSize">-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_open_gallery"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#000000"
+
+            android:background="@drawable/btn_selector"
+            android:drawableStart="@drawable/gallery"
+            android:paddingLeft="0dp"
+            android:text="打开相册"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:background="@drawable/btn_selector"
+            android:text="保存图片"
+            android:drawableStart="@drawable/save"
+            android:paddingLeft="3dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:tooltipText="保存处理完成的图片"/>
+
+        <Button
+            android:id="@+id/btn_undo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:background="@drawable/btn_selector"
+            android:text="撤回操作"
+            android:drawableStart="@drawable/undo"
+            android:paddingLeft="2dp"
+            android:drawablePadding="0dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:tooltipText="撤回上一次涂抹操作"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="0dp"
+            android:text="画笔大小"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+        <SeekBar
+            android:tooltipText="滑动改变画笔粗细"
+            android:id="@+id/seekBar"
+            android:max="50"
+            android:progress="10"
+            android:progressDrawable="@drawable/bg_seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/doodle_container"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:background="#696969"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+
+    <fragment
+        android:id="@+id/nav_host_fragment_activity_main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mobile_navigation" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_gravity="center|bottom"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@drawable/nav_item_icon_tint"
+        app:itemTextColor="@drawable/nav_item_icon_tint"
+        app:itemRippleColor="@android:color/transparent"
+        style="@style/CustomBottomNavStyle"/>
+
+
+
+</LinearLayout>

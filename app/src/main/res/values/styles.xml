@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 自定义 BottomNavigationView 样式 -->
+    <style name="CustomBottomNavStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <!-- 设置背景色 -->
+        <item name="android:background">@color/bottom_nav_background</item>
+
+        <!-- 设置选中项的颜色 -->
+        <item name="itemIconTint">@color/bottom_nav_item_icon</item>
+        <item name="itemTextColor">@color/bottom_nav_item_text</item>
+
+        <!-- 设置选中项的高亮色 -->
+<!--        <item name="itemActiveIndicatorStyle">@style/BottomNavActiveIndicator</item>-->
+    </style>
+
+    <!-- 选中项的颜色（例如，蓝色） -->
+    <color name="bottom_nav_item_icon">#2196F3</color>
+    <color name="bottom_nav_item_text">#2196F3</color>
+    <color name="bottom_nav_background">#ffffff</color>
+</resources>

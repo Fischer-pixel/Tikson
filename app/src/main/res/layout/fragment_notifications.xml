@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center|top"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+    <TextView
+        android:id="@+id/text_notifications"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="0dp"
+            android:text="模型类别"
+            android:gravity="center|right"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        </TextView>
+
+        <Spinner
+            android:id="@+id/gan_spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:entries="@array/data"
+            android:gravity="center"
+            android:textSize="15sp"
+
+            android:textAlignment="center"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_gan_load"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:background="@drawable/btn_selector"
+            android:text="加载模型"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/load"
+            android:paddingLeft="10dp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/btn_gan_process"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:background="@drawable/btn_selector"
+            android:text="处理图片"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/process"
+            android:paddingLeft="15dp"
+            android:tooltipText="开始推理"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--设置滑轨颜色：滑过部分和未滑过部分-->
+    <!--未滑过部分滑轨颜色-->
+    <item
+        android:id="@android:id/background"
+        android:height="4dp"
+        android:gravity="center">
+        <shape>
+            <corners android:radius="67dp"/>
+            <gradient
+                android:angle="270"
+                android:centerColor="#4d000000"
+                android:centerY="0.75"
+                android:endColor="#4d000000"
+                android:startColor="#4d000000" />
+        </shape>
+    </item>
+    <!--滑过部分滑轨颜色-->
+    <item
+        android:id="@android:id/progress"
+        android:height="6dp"
+        android:gravity="center">
+        <clip>
+            <shape>
+                <corners android:radius="67dp"/>
+                <solid android:color="@color/bottom_nav_item_icon"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>
